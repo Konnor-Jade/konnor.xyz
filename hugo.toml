@@ -1,4 +1,4 @@
-baseURL = 'https://konnor.cn/'
+baseURL = 'https://konnor-jade.github.io/'
 languageCode = "zh-cn"
 title = 'Konnor的博客'
 theme = 'hello-friend-ng'
