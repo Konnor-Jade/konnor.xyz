@@ -1,164 +1,204 @@
+# 网站基本URL
 baseURL = 'https://konnor-jade.github.io/'
+# 网站语言代码
 languageCode = "zh-cn"
+# 网站标题
 title = 'Konnor的博客'
+# 使用的主题
 theme = 'hello-friend-ng'
 
+# 启用代码高亮
 PygmentsCodeFences = true
+# 代码高亮主题风格
 PygmentsStyle = "monokai"
 
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+# 版权信息，仅用于RSS模板
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." 
 
+# 模板目录
 archetypeDir = "archetypes"
+# 内容目录
 contentDir   = "content"
+# 数据目录
 dataDir      = "data"
+# 布局目录
 layoutDir    = "layouts"
+# 发布目录
 publishDir   = "public"
 
+# 是否构建草稿
 buildDrafts  = false
+# 是否构建未来日期的文章
 buildFuture  = false
+# 是否构建过期的内容
 buildExpired = false
+# 规范化URL
 canonifyURLs = true
 
+# 启用robots.txt
 enableRobotsTXT = true
+# 启用Git信息
 enableGitInfo   = false
+# 启用表情符号
 enableEmoji     = true
+# 禁用缺失翻译的占位符
 enableMissingTranslationPlaceholders = false
+# 禁用RSS
 disableRSS     = false
+# 禁用站点地图
 disableSitemap = false
+# 禁用404页面
 disable404     = false
+# 禁用Hugo生成器注入
 disableHugoGeneratorInject = false
 
+# 分页配置
 [pagination]
+  # 禁用别名
   disableAliases = false
+  # 分页大小
   pagerSize = 20
+  # 分页路径
   path = 'page'
 
+# 服务配置
 [services]
+  # RSS服务配置
   [services.rss]
-      # Maximum number of items in the RSS feed.
+      # RSS feed中的最大项目数
       limit = 42
       
+# Disqus评论系统配置（已注释）
 #   [services.disqus]
 #     shortname = 'your-disqus-shortname'
+# Google Analytics配置（已注释）
 #   [services.googleAnalytics]
 #     ID = 'G-MEASUREMENT_ID'
 
+# 永久链接格式
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
+# Markdown渲染器配置
 [blackfriday]
+  # 在新标签中打开链接
   hrefTargetBlank = true
 
+# 分类法配置
 [taxonomies]
+  # 标签
   tag      = "tags"
+  # 分类
   category = "categories"
+  # 系列
   series   = "series"
 
+# 参数配置
 [params]
+  # 日期格式
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
 
-  # Metadata mostly used in document's head
-  # 
+  # 网站元数据，主要用于网页头部
   description = "Nice theme for homepages and blogs"
   keywords = ""
   images = [""]
 
-  # Home subtitle of the index page.
-  #
+  # 首页副标题
   homeSubtitle = "Hello Friend NG"
 
-  # Set a background for the homepage
+  # 设置首页背景图
   # backgroundImage = "assets/images/background.jpg"
 
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  #
+  # Git提交详情页的前缀链接，需要启用GitInfo
   # gitUrl = ""
 
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  #
+  # 设置为true可以隐藏指向其他文章的链接
   disableReadOtherPosts = false
 
-  # Enable theme toggle
-  # 
-  # This options enables the theme toggle for the theme. 
-  # Per default, this option is off. 
-  # The theme is respecting the prefers-color-scheme of the operating system. 
-  # With this option on, the page user is able to set the scheme he wants. 
+  # 启用主题切换
+  # 此选项启用主题切换功能
+  # 默认情况下，此选项是关闭的
+  # 主题会尊重操作系统的颜色方案首选项
+  # 启用此选项后，用户可以自行设置所需的主题
   enableThemeToggle = false
 
-  # Sharing buttons
-  #
-  # There are a lot of buttons preconfigured. If you want to change them,
-  # generate the buttons here: https://sharingbuttons.io
-  # and add them into your own `layouts/partials/sharing-buttons.html`
-  #
+  # 分享按钮
+  # 预先配置了很多按钮。如果要更改它们，
+  # 在此处生成按钮：https://sharingbuttons.io
+  # 并将它们添加到 `layouts/partials/sharing-buttons.html`
   enableSharingButtons = true
 
-  # Global language menu
-  #
-  # Enables the global language menu.
-  #
+  # 全局语言菜单
+  # 启用全局语言菜单
   enableGlobalLanguageMenu = true
 
-  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
-  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  #
+  # 通过添加外部资源的URL或链接相对于static文件夹的本地文件来集成JavaScript文件或样式表
+  # 例如："css/styles.css"
   customCSS = []
   customJS  = []
 
-  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
-  #
-  justifyContent = false  # Set "text-align: justify" to .post-content.
+  # 切换此选项需要重建SCSS，需要Hugo的扩展版本
+  # 设置文章内容的对齐方式为"text-align: justify"
+  justifyContent = false
 
-  # Integrate Plausible.io
+  # 集成Plausible.io分析
   # plausibleDataDomain = 'test.com'
   # plausibleScriptSource = 'https://plausible.io/js/script.js'
 
+  # 作者信息
   [params.author]
     name = "Jane Doe"
 
-  # Custom footer 
-  # If you want, you can easily override the default footer with your own content. 
-  #
+  # 自定义页脚
+  # 如果需要，可以轻松用自己的内容覆盖默认页脚
   [params.footer]
+    # 商标年份
     trademark = 2023
+    # 显示RSS链接
     rss = true
+    # 显示版权信息
     copyright = true
+    # 显示作者信息
     author = true
 
+    # 页脚顶部文本
     topText = []
+    # 页脚底部文本
     bottomText = [
       "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
       "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
     ]
 
-  # Colors for favicons
-  #
+  # 网站图标颜色
   [params.favicon.color]
     mask = "#1b1c1d"
     msapplication = "#1b1c1d"
     theme = "#1b1c1d"
 
+  # Logo配置
   [params.logo]
+    # Logo标记
     logoMark     = ">"
+    # Logo文本
     logoText     = "$ cd /home/"
+    # Logo主页链接
     logoHomeLink = "/"
-    # Set true to remove the logo cursor entirely.
+    # 设置为true可完全删除logo光标
     # logoCursorDisabled = false
-    # Set to a valid CSS color to change the cursor in the logo.
+    # 设置为有效的CSS颜色以更改logo中的光标颜色
     # logoCursorColor    = "#67a2c9"
-    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # 设置为有效的CSS时间值以更改动画持续时间，设置为"0s"禁用
     # logoCursorAnimate  = "2s"
-    # Append the current url pathname to logoText 
+    # 将当前URL路径附加到logoText
     # logoCursorPathname = true
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Startpage portrait 
+  # 插件：首页头像
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Uncomment this if you want a portrait on your start page
+  # 取消注释以在首页显示头像
   #
   # [params.portrait]
   #   path     = "/img/image.jpg"
@@ -166,102 +206,127 @@ disableHugoGeneratorInject = false
   #   maxWidth = "50px"
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Commento
+  # 插件：Commento评论系统
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Commento is more than just a comments widget you can embed — 
-  # it’s a return to the roots of the internet. 
-  # An internet without the tracking and invasions of privacy. 
-  # An internet that is simple and lightweight. 
-  # An internet that is focused on interesting discussions, not ads. 
-  # A better internet.
-  # Uncomment this to enable Commento.
+  # Commento不仅仅是一个可嵌入的评论小部件 —— 
+  # 它是互联网根源的回归。
+  # 一个没有跟踪和侵犯隐私的互联网。
+  # 一个简单轻量的互联网。
+  # 一个专注于有趣讨论而非广告的互联网。
+  # 一个更好的互联网。
+  # 取消注释以启用Commento。
   #
   # [params.commento]
   #   url = ""
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Utteranc.es
+  # 插件：Utteranc.es评论系统
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Utteranc.es is a lightweight comments widget built on GitHub issues.
-  # See https://utteranc.es/ for documentation
-  # Uncomment this to enable Utteranc.es.
+  # Utteranc.es是基于GitHub issues构建的轻量级评论小部件。
+  # 查看https://utteranc.es/获取文档
+  # 取消注释以启用Utteranc.es。
   #
   # [params.utterances]
-  #   Your GitHub repository
+  #   您的GitHub仓库
   #
   #   repository = ""
   #
-  #   label used for GitHub issues
+  #   用于GitHub issues的标签
   #
   #   label      = ""
   # 
-  #   Blog Post <-> Issue mapping. This parameter is optional. Possible values are:
-  #      - pathname
-  #      - url
-  #      - title
-  #      - og:title
-  #      - issue number
-  #      - specific term
+  #   博客文章 <-> Issue映射。此参数是可选的。可能的值有：
+  #      - pathname（路径名）
+  #      - url（网址）
+  #      - title（标题）
+  #      - og:title（开放图谱标题）
+  #      - issue number（issue编号）
+  #      - specific term（特定术语）
   #
   #   issueTerm  = ""
   #
-  #   Theme used: possible values are:
-  #      - github-light
-  #      - github-dark
-  #      - preferred-color-scheme
-  #      - github-dark-orange
-  #      - icy-dark
-  #      - dark-blue
-  #      - photon-dark
-  #      - boxy-light
-  #      - gruvbox-dark
+  #   使用的主题：可能的值有：
+  #      - github-light（GitHub浅色）
+  #      - github-dark（GitHub深色）
+  #      - preferred-color-scheme（首选配色方案）
+  #      - github-dark-orange（GitHub深橙色）
+  #      - icy-dark（冰冷深色）
+  #      - dark-blue（深蓝色）
+  #      - photon-dark（光子深色）
+  #      - boxy-light（方框浅色）
+  #      - gruvbox-dark（Gruvbox深色）
   #
   #   theme      = ""
   # 
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Social icons
+  # 插件：社交图标
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   #
+  # Twitter社交链接
   [[params.social]]
     name = "twitter"
     url  = "https://twitter.com/"
 
+  # 邮件联系方式
   [[params.social]]
     name = "email"
     url  = "mailto:nobody@example.com"
 
+  # GitHub社交链接
   [[params.social]]
     name = "github"
     url  = "https://github.com/"
 
+  # LinkedIn社交链接
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/"
 
+  # Stack Overflow社交链接
   [[params.social]]
     name = "stackoverflow"
     url  = "https://www.stackoverflow.com/"
 
+# 多语言支持配置
 [languages]
+  # 英文配置
   [languages.en]
+    # 权重（决定默认语言）
     weight    = 1
+    # 版权信息
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # 英文参数
   [languages.en.params]
+    # 副标题
     subtitle  = "Hello Friend NG Theme"
 
+  # 法文配置
   [languages.fr]
+    # 权重
     weight    = 2
+    # 版权信息
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # 法文参数
   [languages.fr.params]
+    # 副标题
     subtitle  = "Hello Friend NG Theme"
 
+# 导航菜单配置
 [menu]
+  # 关于页面菜单项
   [[menu.main]]
+    # 标识符
     identifier = "about"
+    # 显示名称
     name       = "About"
+    # 链接URL
     url        = "about/"
+  # 文章页面菜单项
   [[menu.main]]
+    # 标识符
     identifier = "posts"
+    # 显示名称
     name       = "Posts"
+    # 链接URL
     url        = "posts/"
